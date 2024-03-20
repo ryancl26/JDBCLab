@@ -1,9 +1,9 @@
 import java.sql.*;
 
-public class arcadeGamesDAL {
+public class ArcadeGamesDAL {
     private Connection connection;
 
-    public arcadeGamesDAL(Connection connection) {
+    public ArcadeGamesDAL(Connection connection) {
         this.connection = connection;
     }
 
