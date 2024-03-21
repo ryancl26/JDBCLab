@@ -21,10 +21,6 @@ public class ArcadeGamesDAL {
     }
 
     public ResultSet executeCallableStatementQuery(String procedureName, Object... params) throws SQLException {
-        CallableStatement callableStatement = connection.prepareCall("{call " + procedureName + "}");
-        for (int i = 0; i < params.length; i++) {
-            callableStatement.setObject(i + 1, params[i]);
-        }
-        return callableStatement.executeQuery();
+
     }
 }
