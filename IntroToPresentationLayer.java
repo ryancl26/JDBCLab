@@ -78,5 +78,17 @@ public class IntroToPresentationLayer
                 }
             break;
         default: System.out.println("invalid choice");
+
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Enter game title: ");
+        String title = userInput.nextLine();
+
+        if (ArcadeGamesDAL.insertGameName(title)){
+            System.out.println("Game title inserted");
         }
-    }  
+        else{
+            System.out.println(Failed to insert name);
+        }
+
+    }
+}  

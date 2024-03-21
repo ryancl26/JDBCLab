@@ -47,5 +47,18 @@ public class ArcadeGamesDAL{
         }
     }
 
+    //extra credit for problem set 2
+    public static boolean insertGameName(String title){
+        try{
+            Connection connection = DataMgr.getArcadeGamesConnection();
+            CallableStatement callableStatement = connection.prepareCall("{CALL  InsertGame(?)}");
+            callableStatement.setString(1, title);
+            return true;
+        }
+        catch (SQLException exception){
+            System.out.println("Failed to insert title");
+            return false;
+        }
+    }
 
 }
