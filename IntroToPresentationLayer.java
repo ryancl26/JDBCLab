@@ -29,7 +29,7 @@ public class IntroToPresentationLayer
 
         switch (choice) {
             case 'i':
-                if (dal.TryExecutingAQuery("MealPlanning", "Select * from Meal", userName, password))
+                if (mealPlanningDAL.TryExecutingAQuery("MealPlanning", "Select * from Meal", userName, password))
                 {
                     System.out.println("Successfully connected to the database");
                 }
@@ -39,7 +39,7 @@ public class IntroToPresentationLayer
                 }
             break;
             case 'ii':
-                if (dal.TryExecutingAStoredProcedure("MealPlanning", userName, password))
+                if (mealPlanningDAL.TryExecutingAStoredProcedure("MealPlanning", userName, password))
                 {
                     System.out.println("Successfully ran a stored procedure");
                 }
